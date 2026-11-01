@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CineBook | Movie Ticket Booking</title>
+</head>
+<body>
+<header>
+    <h1>CineBook 🎬</h1>
+    <p>Your next movie experience starts here.</p>
+    <link rel="stylesheet" href="./style.css">
+</header>
+
+<main>
+    <section id="movies">
+        <h2>Now Showing</h2>
+
+        <div class="movie-container" id="movieContainer">
+            <p>Loading movies...</p>
+        </div>
+    </section>
+
+    <section id="showtimes">
+        <h2>Available Shows</h2>
+
+        <div id="showContainer">
+            <p>Select a movie to view showtimes.</p>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Book Your Tickets 🎟️</h2>
+
+        <form id="bookingForm">
+            <label for="customerName">Your Name</label>
+            <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                    required
+            >
+
+            <label for="numberOfTickets">Number of Tickets</label>
+            <input
+                    type="number"
+                    id="numberOfTickets"
+                    min="1"
+                    value="1"
+                    required
+            >
+
+            <p>Price per ticket: ₹200</p>
+            <p>Estimated Total: ₹<span id="totalPrice">200</span></p>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+
+        <div id="bookingMessage"></div>
+    </section>
+
+    <section id="my-bookings">
+        <h2>My Bookings 🎟️</h2>
+
+        <button type="button" onclick="loadBookings()">
+            View My Bookings
+        </button>
+
+        <div id="bookingsContainer">
+            <p>Click above to view bookings.</p>
+        </div>
+    </section>
+
+</main>
+<script src="./script.js"></script>
+</body>
+</html>
